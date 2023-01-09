@@ -1,0 +1,263 @@
+@import url(whitespace-reset.css);
+@import "modal.css";
+
+header {
+  background-color: rgb(231, 46, 25);
+  padding: 20px;
+  font-family: Helvetica new, Arial, sans-serif;
+  color: #ffff; 
+}
+
+h1 {
+  color: #fff;
+  text-decoration: none;
+  font-size: 36px;
+}
+
+form > h2 {
+  margin-bottom: 20px;
+  margin-right: 0px;
+}
+
+form > p {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-right: 20px;
+}
+
+
+#tags button {
+  margin-right: 10px;
+  padding: 10px;
+  font-size: large;
+  border-radius: 6px;
+}
+
+button.highlight {
+  background-color: rgb(231, 46, 25);
+  color: #fff;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container-col {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(183, 218, 247);
+  border-radius: 4px;
+  padding: 20px;
+  min-height: 80px;
+  border-radius: 6px;
+  border: solid 1px rgb(8, 44, 81);
+}
+
+#tags {
+  flex-direction: row;
+  align-items: center;
+}
+
+#search-contact {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#search-contact > a {
+  margin: 0 75px;
+}
+
+#search-contact > input {
+    padding: 13px;
+    border: 1px solid rgb(235, 194, 194);
+    border-radius: 10px;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.btn {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 6px 12px;
+  border: 1.5px solid rgb(234, 42, 42);
+  color:rgb(224, 42, 42);
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background-color: rgb(231, 46, 25);
+  color: #fff;
+}
+
+.tags-filter-btn:hover {
+  background-color: rgb(231, 46, 25);
+  color: #fff;
+}
+
+.btn-large {
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 1.2em;
+  font-weight: 500;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+}
+
+#empty-contact {
+  padding: 35px 10px 15px;
+  margin: 10px 15px;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contacts {
+  display: flex;
+  align-items: stretch;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.contact {
+  background: #F6F3ED;
+  margin: 10px;
+  padding: 20px;
+  border: 1px dotted maroon;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+form {
+  max-width: 40em;
+  border: solid 1px maroon;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 1em;
+  margin: 20px auto;
+}
+
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+label.title {
+  color: #9e9e9e;
+  display: inline-flex;
+  font-family: Poppins, sans-serif;
+  font-size: 13px;
+  width: 92%;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 5px;
+  margin-left: 12px;
+}
+/* li {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  align-items:center;
+} */
+
+ul li {
+  margin-bottom: 1em;
+}
+
+
+input.textinput {
+  width: 90%;
+  margin-bottom: 10px;
+  height: 2em;
+  border: 1px solid rgba(0,0,0,.3);
+  padding-left: 6px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+#modalBtn {
+  position: absolute;
+  top: 0;
+  right: .25px;
+  z-index: 1;
+  height: 39px;
+  cursor: pointer;
+  border: 1px solid rgba(0,0,0,.3);
+  padding: 6px 8px;
+  margin-right: 25px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+
+span {
+  color: red
+}
+
+label.invalid-field {
+  color:  #a93333;
+}
+
+input.invalid-field {
+  border: solid #a93333;
+}
+
+.form-errors {
+  color: #a93333;
+}
+
+#tag-container {
+  width: 100%;
+  position: relative;
+}
+
+input.tagInput {
+  position: relative;
+}
+
+ul#contact-tags {
+  display: table;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin-left: 25px;
+}
+
+ul#contact-tags li {
+  display: inline;
+  color: #333;
+  font-size: 16px;
+  margin: 4px 3px;
+  border-radius: 5px;
+  background: #F2F2F2;
+  padding: 5px 8px 5px 10px;
+  border: 1px solid #e3e1e1;
+}
+
+ul#contact-tags span {
+  cursor: pointer;
+}

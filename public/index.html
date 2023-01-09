@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Josh-Contact Manager</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link href="stylesheets/site.css" rel="stylesheet">
+  <script src="/javascripts/jquery.js"></script>
+  <script src="/javascripts/handlebars.js"></script>
+  <script src="/javascripts/app.js"></script>
+</head>
+<body>
+  <header> 
+    <div class="container-col">
+      <a href="#">
+        <h1>Contact Manager</h1>
+      </a>
+      <p>This is some text</p>
+    </div>
+  </header>
+  <div id="contact-system" class="container-col">
+  </div>
+  <footer>
+
+    <p>Developed by Joshua Morgan</p>
+  </footer>
+
+  <script type="text/x-handlebars" id="search-contact">
+    <div class="container" id="search-contact">
+      <a href="#" class="add-contact-btn btn btn-large">Add Contact</a>
+      <input id="search-box" type="text" placeholder="Search contacts">
+    </div>
+  </script>
+
+  <script type="text/x-handlebars" id="tags-list">
+    <div class="container" id="tags">
+      <h2>Tags:</h2>
+      {{#each tags}}
+      <button class='tags-filter-btn'>{{.}}</button>
+      {{/each}}
+    </div>
+  </script>
+
+  
+  <script type="text/x-handlebars" id="contact-list"> 
+    <div class='container' id="contacts">
+      {{#each contacts}}
+      {{> contact}}
+      {{/each}}
+    </div>
+  </script>
+
+  <script type="text/x-handlebars" data-type="partial" id="contact"  >
+     <!--id='contact-person'  -->
+    <section class="contact" data-id="{{id}}">
+      <h3>{{full_name}}</h3>
+      <p>Phone Number: {{phone_number}}</p>
+      <p>Email: {{email}}</p>
+      <p>Tags: {{tags}}</p>
+      <div class="contact-btn-wrapper">
+        <a href="#" id="edit-contact" class="btn">Edit</a>
+        <a href="#" id="delete-contact" class="btn">Delete</a>
+      </div>
+    </section>
+  </script>
+  
+  <script type="text/x-handlebars" id="empty-contacts">
+    <div class="container" id="empty-contact">
+      {{#if value}}
+      <h3>There are no contacts starting with '{{value}}'</h3>
+      {{else}}
+      <h3>There are no contacts</h3>
+      {{/if}}
+      <a href="#" class="add-contact-btn btn btn-large">Add Contact</a>
+    </div>
+  </script>
+
+  <script type="text/x-handlebars" id="create-contact">
+    <form  method="POST" class="contact-form" data-id="{{id}}" id="create" novalidate>
+      <h2>Create Contact</h2>
+      <p class="form-errors"></p>
+      {{> contactFormUl}}
+    </form>
+  </script>
+
+  <script type="text/x-handlebars" id="edit-contact">
+    <form  method="PUT" class="contact-form" data-id="{{id}}" id="edit" novalidate>
+      <h2>Edit Contact</h2>
+      <p class="form-errors"></p>
+      {{> contactFormUl}}
+    </form>
+  </script>
+
+  <script type="text/x-handlebars" id="contact-form-ul" data-type="partial"> 
+      <ul>
+        <li>
+          <label for="full_name" class="title">Full Name</label>
+          <input type="text" name="full_name" id="form-name" class="textinput" value="{{full_name}}" required>
+        </li>
+        <li>
+          <label for="email" class="title">Email</label>
+          <input type="email" name="email" id="form-email" class="textinput" value="{{email}}" pattern=".+@.+\..+"  required>
+        </li>
+        <li>
+          <label for="phone_number" class="title">Phone Number</label>
+          <input type="tel" name="phone_number" id="form-tel" class="textinput" placeholder="111-222-3333" pattern="\d{3}-\d{3}-\d{4}" value="{{phone_number}}" required>
+        </li>
+        <li>
+          <label for="tags" class="title">Tags</label>
+          <div id="tag-container">
+            <input type="text" name="tags" id="form-tag"class="textinput tagInput">
+            <button id="modalBtn">Tag Selector</button>
+          </div>
+        </li>
+        <div id="checkboxes" class="modal">
+          <div id="modal-content" class="modal-content">
+            <span class="close-modal">&times;</span>
+          </div>
+        </div>
+      </ul>
+      <ul id='contact-tags'></ul>
+      <div class="contact-btn-wrapper">
+        <button type="submit" class="btn submit-btn">Submit</button>
+        <button class="btn cancel-btn">Cancel</a>
+      </div>
+  </script>
+
+  <script type="text/x-handlebars" id="form-tag-list">
+    <li>{{tag}}
+      <span class="remove-tag fa-solid fa-x"></span>
+    </li>
+  </script>
+
+  <script type="text/x-handlebars" id="modal-tag-checkbox">
+    <label class="tag-form-control">
+        {{#if isChecked}}
+        <input type="checkbox" checked>
+        {{else}}
+        <input type="checkbox">
+        {{/if}}
+        {{tag}}
+      </label>
+  </script>
+</body>
+</html>
+<!-- https://www.youtube.com/watch?v=y4gZMJKAeWs&list=PLu8EoSxDXHP6CGK4YVJhL_VWetA865GOH&index=6 -->

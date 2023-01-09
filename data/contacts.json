@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "full_name": "Naveed Fida",
+    "email": "nf@example.com",
+    "phone_number": "123-456-7899",
+    "tags": "business,friend"
+  },
+  {
+    "id": 2,
+    "full_name": "Victor Reyes",
+    "email": "vpr@example.com",
+    "phone_number": "098-765-4321",
+    "tags": "relative,family"
+  },
+  {
+    "id": 3,
+    "full_name": "Pete Hanson",
+    "email": "ph@example.com",
+    "phone_number": "543-210-9876",
+    "tags": ""
+  },
+  {
+    "full_name": "josh morgan",
+    "phone_number": "123",
+    "email": "jmorg0605@gmail.com",
+    "tags": "",
+    "id": 6
+  },
+  {
+    "full_name": "Jimmy Jones",
+    "phone_number": "123",
+    "email": "abc@gmail.com",
+    "tags": "home,friend",
+    "id": 8
+  },
+  {
+    "full_name": "Karen Morgan",
+    "phone_number": "111-222-3333",
+    "email": "karenhp04@gmail.com",
+    "tags": "wife",
+    "id": 9
+  },
+  {
+    "full_name": "jimmy james",
+    "phone_number": "123-456-7890",
+    "email": "email@email.com",
+    "tags": "friend,christmas",
+    "id": 10
+  }
+]
