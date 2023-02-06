@@ -132,7 +132,7 @@ const ContactManager = {
   getContact: async function (contactId) {
     try {
       let response = await fetch(
-        `http://localhost:3000/api/contacts/${contactId}`
+        `http://localhost:3001/api/contacts/${contactId}`
       );
       if (!response.ok) {
         throw new Error(response.status);
@@ -147,7 +147,7 @@ const ContactManager = {
 
   getContacts: async function () {
     try {
-      let response = await fetch("http://localhost:3000/api/contacts", {
+      let response = await fetch("http://localhost:3001/api/contacts", {
         method: "GET",
         headers: {
           "Content-type": "application/json; charset=utf-8",
