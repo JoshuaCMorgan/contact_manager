@@ -1,9 +1,9 @@
 # INSTRUCTIONS FOR USE
 
-Download this repository
-Run npm install in project directory
-Run nmp start to start a server on localhost
-Visit http://localhost:3000/
+- Download this repository
+- Run npm install in project directory
+- Run nmp start to start a server on localhost
+- Visit http://localhost:3000/
 
 # Focus of Project
 Build the front-end functionality that connects to back-end API.
