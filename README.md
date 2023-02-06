@@ -1,8 +1,8 @@
 # INSTRUCTIONS FOR USE
 
 - Download this repository
-- Run npm install in project directory
-- Run nmp start to start a server on localhost
+- Run `npm install` in project directory
+- Run `npm start` to start a server on localhost
 - Visit http://localhost:3000/
 
 # Focus of Project
